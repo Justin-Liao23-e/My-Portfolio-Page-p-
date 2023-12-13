@@ -1,0 +1,456 @@
+/*-----About-----*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #080808;
+    color: #fff;
+}
+
+/*Styling for Your Picture*/
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/main.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+/*Styling that Contains Below*/
+.container{
+    padding: 10px 10%;
+}
+/*Styling for the Entire Navigation Section*/
+nav{
+    display: flex; /*flexible arrangement*/
+    align-items: center; 
+    justify-content: space-between; /*space between each navigation bar*/
+    flex-wrap: wrap; /*wrap onto multiple lines if they don't fit in one line (different screen size)*/
+}
+/*Styling Specifically for the Logo of the Navigation Bar*/
+.logo{
+    width: 140px;
+}
+/*Styling for the Connected Lists of Navigation Bar*/
+nav ul li{
+    display: inline-block; /*horizontal layout*/
+    list-style: none;
+    margin: 10px 20px;
+}
+/*Styling for Each Navigation Bar*/
+nav ul li a{
+    color: #fff;
+    text-decoration: none; /*remove the underline*/
+    font-size: 25px;
+    position: relative;
+}
+/*Styling of Underlines of Each Navigation Bar (Initial State)*/
+nav ul li a::after{
+    content: ''; /*set initial value type, try it out with strings*/
+    width: 0; /*display no underlines initially*/
+    height: 3px;
+    background: #ff004f; /*the color of each underline*/
+    position: absolute;
+    left: 0; /*position the lines in the middle*/
+    bottom: -6px; /*position the lines absolute to the bottom*/
+    transition: 0.5s; /*the lines will appear in 0.5s*/
+}
+/*Display of Underlines when Hovering (Final State)*/
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/*Styling for the Introduction & Job Title*/
+.header-text{
+    text-shadow: 2px 2px 2px black; /*shawdow for text*/
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+/*Styling Only for My First Name*/
+.header-text h1 span{
+    color: #ff004f;
+}
+
+/*Styling for the Logo*/
+.logo {
+    box-shadow: 0px 0px 10px 15px rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+/*-----About-----*/
+#about{
+    padding: 80px 0;
+    color: #ababab; /*the color for all text in this section*/
+}
+/*Styling for the About-Column 1 and 2*/
+.row{
+    display: flex; /*flexible arrangement*/
+    justify-content: space-between; /*leave space between these two columns*/
+    flex-wrap: wrap; /*wrap onto multiple lines when not fitting in one line*/
+}
+
+/*Styling for the First Column*/
+.about-col-1{
+    flex-basis: 35%; /*width of the column*/
+}
+/*Styling for the Image in the About Section*/
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px; /*rounded corner for the image*/
+}
+
+/*Styling for the Second Column*/
+.about-col-2{
+    flex-basis: 60%; /*adding the 35% from column 1 makes 5% left, which is the space between the columns*/
+}
+.about-col-2 p{
+    font-size: 20px;
+}
+/*Styling for the Text "About Me"*/
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+/*Styling for the Links Bar*/
+.tab-titles{
+    display: flex; /*flexible arrangement*/
+    margin: 20px 0 40px; /*top, left&right, and bottom*/
+}
+/*Styling for the Tab Links (Skills&Experience&Education)*/
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative; /*posits relative to each link*/
+}
+/*Display Red Lines for Each Tab Link*/
+.tab-links::after{
+    content: '';
+    width: 0; /*display no underlines initially*/
+    height: 3px;
+    background: #ff004f; /*the color of each underline*/
+    position: absolute;
+    left: 0; /*position the lines in the middle*/
+    bottom: -8px; /*position the lines absolute to the bottom*/
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+/*Styling for the Lists of Tab Contents*/
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+/*Hiding All Contents Initially*/
+.tab-contents{
+    display: none;
+}
+/*Display the Skills Content*/
+.tab-contents.active-tab{
+    display: block;
+}
+
+/*-----Services-----*/
+#services{
+    padding: 30px 0;
+}
+
+/*Styling for the Connected Lists of Services*/
+.services-list{
+    display: grid; /*each list will appear as a grid*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*repeat() repeats the column definition; auto-fit creates as many columns as will fit in the available space; minmax() defines the minimum and maximum size of each column*/
+    grid-gap: 40px; /*specifies the size of the gap between grid items*/
+    margin-top: 50px;
+}
+/*Styling for the background of the Divisions of Service List*/
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s; /*transition time when hovering on each list*/
+}
+/*Styling for Each Icon*/
+.services-list div i{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+/*Decoration for Each Title*/
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+/*Decoration for the Learn More Text*/
+.services-list div a{
+    text-decoration: none; /*removes underline from the hyperlink*/
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block; /*displays list items horizontally*/
+}
+/*Change in Display of Each Service List When Hovering*/
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px); /*move the hovered list box by 10px*/
+}
+
+/*-----Portfolio-----*/
+#portfolio{
+    padding: 50px 0;
+}
+
+/*Styling for the Connected Lists of Work*/
+.work-list{
+    display: grid; /*each work will appear as a grid*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*repeat() repeats the column definition; auto-fit creates as many columns as will fit in the available space; minmax() defines the minimum and maximum size of each column*/
+    grid-gap: 40px; /*specifies the size of the gap between grid items*/
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative; /*posits relative to the normal position*/
+    overflow: hidden; /*stating that any content that overflows the work element will be hidden*/
+}
+/*Styling for Each Image*/
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s; /*transition time that zooms in the image when hovering*/
+}
+/*Decoration for Each Image's Text Section*/
+.layer{
+    width: 100%;
+    height: 0; /*initially hidden*/
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f); /*gradient color*/
+    border-radius: 10px;
+    position: absolute; /*posits the text absolute to the image*/
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /*align alex item vertically to the center*/
+    justify-content: center; /*align flex item horizontally to the center*/
+    flex-direction: column; /*sets the direction of flex items to be vertical*/
+    padding: 0 40px;
+    text-align: center; /*align paragraph text to the center*/
+    font-size: 14px;
+    transition: height 0.5s ; /*transition time for the text&icon to show up*/
+}
+/*Decoration for Each Image Title*/
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+/*Decoration for Each Icon*/
+.layer a{
+    margin-top: 20px;
+    color: #ff004f; /*color for the icon*/
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px; /*height of each line box*/
+    background: #fff; /*background color of the icon*/
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+/*Display Zoomed-in Image When Hovering*/
+.work:hover img{
+    transform: scale(1.1); /*setting same scale when zoom in*/
+}
+/*Display Text&Icon When Hovering*/
+.work:hover .layer{
+    height: 100%;
+}
+
+/*Styling for "See More" and "Download CV"*/
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content; /*sets the width to fit the content within the element*/
+    border: 1px solid #ff004f; /*border decoration*/
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none; /*remove the underline of the link*/
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+
+/*-----Contact-----*/
+/*Space Between Text and Input Section*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+
+/*Styling for "Contact Me*/
+.contact-left p{
+    margin-top: 30px;
+}
+/*Styling for Each Icon Beside the Text*/
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 30px;
+}
+
+/*Styling for the Social Media Icon Section*/
+.social-icons{
+    margin-top: 30px;
+}
+/*Styling for Each Social Media Icon*/
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block; /*displays list items horizontally*/
+    transition: transform 0.5s; /*transition time for icon to move up*/
+}
+/*Display Change in Icon Position When Hovering*/
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px); /*move up 5px*/
+}
+
+/*Styling Only for "Download Cv"*/
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+
+/*Styling for the Form Section*/
+.contact-right form{
+    width: 100%;
+}
+/*Styling for the Input and Textarea*/
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff; /*user's input text color*/
+    font-size: 18px;
+    border-radius: 6px;
+}
+/*Styling for the Submit Button*/
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/*Styling for the Copyright*/
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #ff004f;
+}
+
+/*Styling for "hello"*/
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+
+/*-----CSS for Small Screen-----*/
+/*Menu&Close Icon*/
+nav .fas{
+    display: none;
+}
+
+/*Small Screen Display*/
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(Images/main.jpeg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
