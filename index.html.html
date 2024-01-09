@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a58ede48c2.js" crossorigin="anonymous"></script> <!--connecting to fontawesome.com for icons-->
+</head>
+<body>
+    <!-----Home----->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/Club Logo.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portofolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i> <!--cross icon-->
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i> <!--menu icon-->
+            </nav>
+            <div class="header-text">
+                <p>Entrepreneur | Web Developer | UI/UX Designer</p>
+                <h1>"Defy the Odds!"<br> - <span>Justin</span>Liao</h1>
+            </div>
+        </div>
+    </div>
+    <!-----About----->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/profile.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Passionate in pursuing the field of Web Development & Artificial Intelligence. 
+                    Had collaborative experience developing + launching web applications. Currently leading/managing 
+                    teams/clubs as the President/Founder of the Tech Startup Club (TSC) and the Vice President of the 
+                    Computer Programming Club (CPC) in Bellevue College; TSC focuses on software startup experience on 
+                    app development/launch, while CPC prioritize in intense coding and problem-solving ability.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Web App Developement</li>
+                            <li><span>App Development</span><br>Building Crossplatform Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2019 - 2020</span><br>Personal Projects - Number Bases Converters</li>
+                            <li><span>2022 - 2023</span><br>Collaborate & Launch Website for Bellevue College Computer Programming Club (CPC)</li>
+                            <li><span>2023 - Present</span><br>Co-lead the CPC on web development and projects</li>
+                            <li><span>2023 - Present</span><br>Founded and leading the Tech Startup Club (TSC) on Tech entrepreneurship on web/app developments</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021 - 2024</span><br>Bellevue College - AAS - Computer Science</li>
+                            <li><span>2024 - 2025</span><br>Pre-Stanford - Computer Science</li>
+                            <li><span>2025 - future</span><br>OUT OF MATRIX</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----Services-----
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i> <!--icon from fontawesome.com--
+                    <h2>Web Designer</h2> <!--column 1--
+                    <p>your description your descriptionyour descriptionyour description
+                    your descriptionyour description your description</p>
+                    <a href="#">Learn more</a> <!--!!!--
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-crop"></i> <!--icon from fontawesome.com--
+                    <h2>UI/UX Design</h2> <!--column 2--
+                    <p>your description your descriptionyour descriptionyour description
+                    your descriptionyour description your description</p>
+                    <a href="#">Learn more</a> <!--!!!--
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i> <!--icon from fontawesome.com--
+                    <h2>App Design</h2> <!--column 3--
+                    <p>your description your descriptionyour descriptionyour description
+                    your descriptionyour description your description</p>
+                    <a href="#">Learn more</a> <!--!!!--
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-----Portfolio----->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/work-1.png">
+                    <div class="layer">
+                        <h3>CPC Club Website</h3>
+                        <p>Developed club website for CPC from scratch with HTML, CSS, & JavaScript. The website was launched around Sep. 2023.
+                        I specifically focused on the contact page and the footer. Currently co-leading the club on maintaining and improving our website. 
+                        </p>
+                        <a href="https://www.bccomputerprogramingclub.com/home"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a> <!--!!!-->
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/work-2.png">
+                    <div class="layer">
+                        <h3>Party App - Bam (Under Development)</h3>
+                        <p>An app that allows student to socialize with parties. College student can look for parties around or create a party. Visit 
+                            Tech Startup Club website below for more info.
+                        </p>
+                        <a href="https://bcstartup.tech/"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a> <!--!!!-->
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a> <!--!!!-->
+        </div>
+    </div>
+    <!-----Contact----->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i>kuanying.liao@bellevuecollege.edu</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a> <!--!!!-->
+                        <a href="www.linkedin.com/in/kuan-ying-liao-08878a28b"><i class="fa-brands fa-linkedin"></i></a> <!--!!!-->
+                    </div>
+                    <a href="#Document" download class="btn btn2">Download Resume</a> <!--!!!-->
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright by @Justin.Liao. All rights reserved.</p>
+        </div>
+    </div>
+
+<!---Service Section JavaScript--->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){ //removing the red line when clicked
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){ //removing  skills' contents
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link"); //display the red line when clicked
+        document.getElementById(tabname).classList.add("active-tab"); //display the required content when clicked
+    }
+</script>
+<!---Small Screen Menu Function JavaScript--->
+<script>
+    var sidemenu = document.getElementById("sidemenu")
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<!--Contact Form Function (third party API)-->
+<script>
+    const scriptURL = '#'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully! Thank You!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
